@@ -1,4 +1,4 @@
-x# Nutanix DL use case
+# Nutanix DL use case
 This repo contains the information and files necessary to setup the VM on Nutanix.
 
 # VM prerequisites
