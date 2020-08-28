@@ -24,4 +24,4 @@ RUN cd /darknet && \
     mkdir -p mydata && \
     mkdir -p myweights
     
-WORKDIR /darknet   
+#WORKDIR /darknet   
