@@ -52,7 +52,6 @@ mkdir -p mydata
 mkdir -p myconfig
 mkdir -p myweights
 mv yolov4.weights ./myweights/
-mv yolov4.cfg ./myconfig/
 mv csdarknet53-omega.cfg ./myconfig/
 mv csdarknet53-omega_final.weights ./myweights/
 docker run --gpus all  -v $(pwd)/myconfig:/darknet/myconfig -v $(pwd)/mydata:/darknet/mydata -v $(pwd)/myweights:/darknet/myweights yolov4  /darknet/darknet partial /darknet/myconfig/csdarknet53-omega.cfg /darknet/myweights/csdarknet53-omega_final.weights /darknet/myweights/csdarknet53-omega.conv.105 105
