@@ -1,11 +1,19 @@
 # Nutanix DL use case
-This repo contains the information and files necessary to setup the VM on Nutanix.
+This repo contains the information and files necessary to setup the VM on Nutanix.<br>
+Below instructions are validated on a vanilla Ubuntu 18.04 VPS on Datacrunch.io.
 
 # VM prerequisites
-CPU: 4 
-GPU: 2
-RAM: 32GB
-HDD: 120GB
+## Hardware (virtual)
+- CPU: 4 
+- GPU: 2
+- RAM: 32GB
+- HDD: 120GB
+
+## Software
+- OS: Ubuntu 18.04.04
+- nvidia driver (latest)
+- git
+- sudo or root access
 
 # Setup instructions
 Clone this repository onto the VM.
@@ -13,8 +21,7 @@ Run the setup script.
 ```bash
 $git clone https://github.com/jax79sg/nutanix_dlusecase
 $cd nutanix_dlusecase
-$chmod +x setupVM.sh
-$chmod +x get_coco_dataset.sh
+$chmod +x *.sh
 $./setupVM.sh
 ```
 # Testing instructions
@@ -56,6 +63,6 @@ $./testTraining1gpu.sh
 # Validation instructions
 Record the output of the run after about 30 mins with the following command
 ```bash
-docker logs yolov4 > yolov4.log
+docker logs testTraining1gpu > testTraining1gpu.log
 ```
-Save the yolov4.log and pass to Kah Siong for analysis.
+Save the testTraining1gpu.log and pass to Kah Siong for analysis.
