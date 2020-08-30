@@ -20,8 +20,7 @@ Run the setup script.
 ```bash
 $git clone https://github.com/jax79sg/nutanix_dlusecase
 $cd nutanix_dlusecase
-$chmod +x setupVM.sh
-$chmod +x get_coco_dataset.sh
+$chmod +x *.sh
 $./setupVM.sh
 ```
 # Testing instructions
