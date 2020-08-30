@@ -3,16 +3,16 @@ This repo contains the information and files necessary to setup the VM on Nutani
 
 # VM prerequisites
 ## Hardware (virtual)
-CPU: 4 
-GPU: 2
-RAM: 32GB
-HDD: 120GB
+- CPU: 4 
+- GPU: 2
+- RAM: 32GB
+- HDD: 120GB
 
 ## Software
-OS: Ubuntu 18.04.04
-nvidia driver (latest)
-git
-sudo or root access
+- OS: Ubuntu 18.04.04
+- nvidia driver (latest)
+- git
+- sudo or root access
 
 # Setup instructions
 Clone this repository onto the VM.
