@@ -63,6 +63,6 @@ $./testTraining1gpu.sh
 # Validation instructions
 Record the output of the run after about 30 mins with the following command
 ```bash
-docker logs yolov4 > yolov4.log
+docker logs testTraining1gpu > testTraining1gpu.log
 ```
-Save the yolov4.log and pass to Kah Siong for analysis.
+Save the testTraining1gpu.log and pass to Kah Siong for analysis.
