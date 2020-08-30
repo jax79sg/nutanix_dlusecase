@@ -1,5 +1,6 @@
 # Nutanix DL use case
-This repo contains the information and files necessary to setup the VM on Nutanix.
+This repo contains the information and files necessary to setup the VM on Nutanix.<br>
+Below instructions are validated on a vanilla Ubuntu 18.04 VPS on Datacrunch.io.
 
 # VM prerequisites
 ## Hardware (virtual)
