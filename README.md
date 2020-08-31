@@ -3,6 +3,9 @@ This repo contains the information and files necessary to setup the VM on Nutani
 Below instructions are validated on a vanilla Ubuntu 18.04 VPS on Datacrunch.io.
 
 # VM prerequisites
+## Network
+- High speed internet
+
 ## Hardware (virtual)
 - CPU: At least 4 
 - GPU: At least 2 x 8GB
