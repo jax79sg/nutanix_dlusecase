@@ -4,10 +4,10 @@ Below instructions are validated on a vanilla Ubuntu 18.04 VPS on Datacrunch.io.
 
 # VM prerequisites
 ## Network
-- High speed internet
+- High speed internet (Else installation will be slow)
 
 ## Hardware (virtual)
-- CPU: At least 4 
+- CPU: At least 16 (Else installation will be slow)
 - GPU: At least 2 x 8GB
 - RAM: At least 32GB
 - HDD: At least 120GB
