@@ -4,10 +4,10 @@ Below instructions are validated on a vanilla Ubuntu 18.04 VPS on Datacrunch.io.
 
 # VM prerequisites
 ## Hardware (virtual)
-- CPU: 4 
-- GPU: 2
-- RAM: 32GB
-- HDD: 120GB
+- CPU: At least 4 
+- GPU: At least 2 x 8GB
+- RAM: At least 32GB
+- HDD: At least 120GB
 
 ## Software
 - OS: Ubuntu 18.04.04
@@ -60,9 +60,49 @@ $./testTraining1gpu.sh
  
 ```
 
+3. To run a multi GPU training. 
+*NOTE:* You must have performed at least 1000 iterations of the single GPU training
+Run `watch nvidia-smi` to validate both gpus being utilised.
+```bash
+$./testTraining2gpu.sh
+[yolo] params: iou loss: ciou (4), iou_norm: 0.07, cls_norm: 1.00, scale_x_y: 1.05
+Total BFLOPS 91.095 
+avg_outputs = 757643 
+ Allocate additional workspace_size = 75.50 MB 
+
+ seen 64, trained: 12 K-images (0 Kilo-batches_64) 
+net.optimized_memory = 0 
+mini_batch = 1, batch = 32, time_steps = 1, train = 1 
+nms_kind: greedynms (1), beta = 0.600000 
+nms_kind: greedynms (1), beta = 0.600000 
+nms_kind: greedynms (1), beta = 0.600000 
+Loading weights from /darknet/myweights/backup/yolov4_last.weights...Done! Loaded 162 layers from weights-file 
+ Create 12 permanent cpu-threads 
+
+ seen 64, trained: 12 K-images (0 Kilo-batches_64) 
+Learning Rate: 0.0026, Momentum: 0.949, Decay: 0.0005
+Resizing, random_coef = 1.40 
+
+ 736 x 736 
+ try to allocate additional workspace_size = 156.01 MB 
+ CUDA allocate done! 
+ try to allocate additional workspace_size = 156.01 MB 
+ CUDA allocate done! 
+Loaded: 0.000039 seconds
+
+ 402: 27.874079, 27.874079 avg loss, 0.000068 rate, 9.233807 seconds, 25728 images, -1.000000 hours left
+Loaded: 0.000045 seconds
+Syncing... Done!
+
+ 404: 27.877659, 27.874437 avg loss, 0.000072 rate, 8.956024 seconds, 25856 images, 1282.733183 hours left
+Loaded: 0.000095 seconds
+
+```
+
 # Validation instructions
 Record the output of the run after about 30 mins with the following command
 ```bash
 docker logs testTraining1gpu > testTraining1gpu.log
+docker logs testTraining2gpu > testTraining2gpu.log
 ```
 Save the testTraining1gpu.log and pass to Kah Siong for analysis.
