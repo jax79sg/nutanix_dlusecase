@@ -103,7 +103,7 @@ Loaded: 0.000095 seconds
 ```
 
 # Validation instructions
-Record the output of the run after about 30 mins with the following command
+Record the output of the run after about 2 hours with the following command
 ```bash
 docker logs testTraining1gpu > ./mydata/testTraining1gpu.log
 docker logs testTraining2gpu > ./mydata/testTraining2gpu.log
