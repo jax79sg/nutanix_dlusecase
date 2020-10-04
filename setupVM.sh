@@ -37,6 +37,11 @@ sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit nvidia-c
 sudo cp daemon.json /etc/docker/daemon.json
 sudo systemctl restart docker
 
+# -----------------------------------------------------------
+
+sudo docker pull quay.io/jax79sg/ai-benchmark
+
+# -----------------------------------------------------------
 sudo docker build . -t yolov4
 
 #Download pretrained model and config
