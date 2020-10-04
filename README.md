@@ -28,6 +28,15 @@ $chmod +x *.sh
 $./setupVM.sh
 ```
 # Testing instructions
+0. To run a benchmark based on http://ai-benchmark.com/alpha
+```
+#Tests the GPU
+docker run --gpus all  ai-benchmark "/bin/bash -c 'python3 run-bench-gpu.py'" 
+
+#Tests the CPU
+docker run --gpus all  ai-benchmark "/bin/bash -c 'python3 run-bench-cpu.py'" 
+```
+
 1. To run a quick inference test to validate installation.
 ```bash
 $./testInfer.sh
