@@ -37,9 +37,11 @@ sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit nvidia-c
 sudo cp daemon.json /etc/docker/daemon.json
 sudo systemctl restart docker
 
-# -----------------------------------------------------------
+# ---------------------Setup ai-benchmark and HP DLBS benchmark--------------------------------------
 
 sudo docker pull quay.io/jax79sg/ai-benchmark
+
+git clone https://github.com/joehandzik/dlcookbook-dlbs dlbs
 sudo docker pull nvcr.io/nvidia/tensorflow:18.04-py3
 sudo docker pull nvcr.io/nvidia/caffe2:18.05-py2
 sudo docker pull nvcr.io/nvidia/mxnet:18.05-py2
