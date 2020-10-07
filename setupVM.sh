@@ -40,6 +40,11 @@ sudo systemctl restart docker
 # -----------------------------------------------------------
 
 sudo docker pull quay.io/jax79sg/ai-benchmark
+sudo docker pull nvcr.io/nvidia/tensorflow:18.04-py3
+sudo docker pull nvcr.io/nvidia/caffe2:18.05-py2
+sudo docker pull nvcr.io/nvidia/mxnet:18.05-py2
+sudo docker pull nvcr.io/nvidia/pytorch:18.05-py3
+sudo docker pull nvcr.io/nvidia/caffe:18.05-py2
 
 # -----------------------------------------------------------
 sudo docker build . -t yolov4
