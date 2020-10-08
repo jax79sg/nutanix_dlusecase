@@ -41,8 +41,12 @@ sudo systemctl restart docker
 
 sudo docker pull quay.io/jax79sg/ai-benchmark
 
+pip2 install virtualenv
+
 git clone https://github.com/joehandzik/dlcookbook-dlbs dlbs
-source ./dlbs//scripts/environment.sh
+virtualenv ./dlbs/venv
+source ./dlbs/venv/bin/activate
+pip2 install numpy matplotlib pandas
 sudo docker pull nvcr.io/nvidia/tensorflow:18.04-py3
 sudo docker pull nvcr.io/nvidia/caffe2:18.05-py2
 sudo docker pull nvcr.io/nvidia/mxnet:18.05-py2
