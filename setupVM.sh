@@ -42,6 +42,7 @@ sudo systemctl restart docker
 sudo docker pull quay.io/jax79sg/ai-benchmark
 
 git clone https://github.com/joehandzik/dlcookbook-dlbs dlbs
+source ./dlbs//scripts/environment.sh
 sudo docker pull nvcr.io/nvidia/tensorflow:18.04-py3
 sudo docker pull nvcr.io/nvidia/caffe2:18.05-py2
 sudo docker pull nvcr.io/nvidia/mxnet:18.05-py2
