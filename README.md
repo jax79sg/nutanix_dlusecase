@@ -43,6 +43,13 @@ cd dlbs
 source ./venv/bin/activate
 source ./scripts/environment.sh    
 python2 $experimenter run  -Pexp.framework='"nvtfcnn"' -Vexp.model='["alexnet","deep_mnist","googlenet","inception3","inception4","overfeat","resnet18","resnet34","resnet101","resnet152","resnet200","resnet269","vgg11","vgg13","resnet50", "alexnet_owt","vgg16","vgg19"]' -Vexp.gpus='["0"]' -Pexp.dtype='"float16"' -Pexp.log_file='"./runs/logs/${exp.id}.log"'
+
+python2 $experimenter run  -Pexp.framework='"pytorch"' -Vexp.model='["alexnet","deep_mnist","googlenet","inception3","inception4","overfeat","resnet18","resnet34","resnet101","resnet152","resnet200","resnet269","vgg11","vgg13","resnet50", "alexnet_owt","vgg16","vgg19"]' -Vexp.gpus='["0"]' -Pexp.dtype='"float16"' -Pexp.log_file='"./runs/logs/${exp.id}.log"'
+
+python2 $experimenter run  -Pexp.framework='"caffe2"' -Vexp.model='["alexnet","deep_mnist","googlenet","inception3","inception4","overfeat","resnet18","resnet34","resnet101","resnet152","resnet200","resnet269","vgg11","vgg13","resnet50", "alexnet_owt","vgg16","vgg19","inception_resnet_v2"]' -Vexp.gpus='["0"]' -Pexp.dtype='"float16"' -Pexp.log_file='"./runs/logs/${exp.id}.log"'
+
+python2 $experimenter run  -Pexp.framework='"mxnet"' -Vexp.model='["alexnet","deep_mnist","googlenet","inception3","inception4","overfeat","resnet18","resnet34","resnet101","resnet152","resnet200","resnet269","vgg11","vgg13","resnet50", "alexnet_owt","vgg16","vgg19","inception_resnet_v2","deep_speech2"]' -Vexp.gpus='["0"]' -Pexp.dtype='"float16"' -Pexp.log_file='"./runs/logs/${exp.id}.log"'
+
 ```
 
 1. To run a quick inference test to validate installation.
