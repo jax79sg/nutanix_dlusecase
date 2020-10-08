@@ -28,13 +28,21 @@ $chmod +x *.sh
 $./setupVM.sh
 ```
 # Testing instructions
-0. To run a benchmark based on http://ai-benchmark.com/alpha
+1. To run a benchmark based on http://ai-benchmark.com/alpha
 ```
 #Tests the GPU
 docker run --gpus all  ai-benchmark "/bin/bash -c 'python3 run-bench-gpu.py'" 
 
 #Tests the CPU
 docker run --gpus all  ai-benchmark "/bin/bash -c 'python3 run-bench-cpu.py'" 
+```
+
+2. To run a benchmark based on https://hewlettpackard.github.io/dlcookbook-dlbs
+```
+cd dlbs
+source ./venv/bin/activate
+source ./scripts/environment.sh    
+python2 $experimenter run  -Pexp.framework='"nvtfcnn"' -Vexp.model='["resnet50", "alexnet_owt"]' -Vexp.gpus='["0"]' -Pexp.dtype='"float16"' -Pexp.log_file='"./runs/logs/${exp.id}.log"'
 ```
 
 1. To run a quick inference test to validate installation.
