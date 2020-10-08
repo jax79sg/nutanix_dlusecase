@@ -43,7 +43,8 @@ sudo docker pull quay.io/jax79sg/ai-benchmark
 
 pip2 install virtualenv
 
-git clone https://github.com/joehandzik/dlcookbook-dlbs dlbs
+git clone https://github.com/HewlettPackard/dlcookbook-dlbs dlbs
+apt install -y nvidia-docker2
 virtualenv -p /usr/bin/python2.7 ./dlbs/venv
 source ./dlbs/venv/bin/activate
 pip install numpy matplotlib pandas
