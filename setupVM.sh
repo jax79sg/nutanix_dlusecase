@@ -40,6 +40,7 @@ sudo systemctl restart docker
 # ---------------------Setup ai-benchmark and HP DLBS benchmark--------------------------------------
 
 sudo docker pull quay.io/jax79sg/ai-benchmark
+sudo docker tag quay.io/jax79sg/ai-benchmark ai-benchmark
 
 # pip2 install virtualenv
 
@@ -80,4 +81,6 @@ axel -n 10 https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3
 
 
 source $(pwd)/get_coco_dataset.sh
+
+docker run --gpus all  ai-benchmark "/bin/bash -c 'python3 run-bench-gpu.py'" 
 
