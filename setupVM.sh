@@ -59,11 +59,11 @@ sudo docker tag quay.io/jax79sg/ai-benchmark ai-benchmark
 sudo docker build . -t yolov4
 
 #Download pretrained model and config
-axel -n 10 https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
+axel -a -n 10 https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
 wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg
 wget https://raw.githubusercontent.com/roboflow-ai/darknet/master/cfg/csdarknet53-omega.cfg
 
-axel -n 10 https://drive.google.com/u/0/uc?export=download&confirm=-TRL&id=18jCwaL4SJ-jOvXrZNGHJ5yz44g9zi8Hm
+axel -a -n 10 https://drive.google.com/u/0/uc?export=download&confirm=-TRL&id=18jCwaL4SJ-jOvXrZNGHJ5yz44g9zi8Hm
 wget --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=18jCwaL4SJ-jOvXrZNGHJ5yz44g9zi8Hm" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p' > /tmp/confirm && wget --load-cookies /tmp/cookies.txt --no-check-certificate "https://docs.google.com/uc?export=download&confirm="$(cat /tmp/confirm)"&id=18jCwaL4SJ-jOvXrZNGHJ5yz44g9zi8Hm" -O csdarknet53-omega_final.weights && rm /tmp/cookies.txt /tmp/confirm
 
 #Setup working folders
@@ -77,7 +77,7 @@ docker run --gpus all  -v $(pwd)/myconfig:/darknet/myconfig -v $(pwd)/mydata:/da
 
 
 #Setup training
-axel -n 10 https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137
+axel -a -n 10 https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137
 
 
 source $(pwd)/get_coco_dataset.sh
